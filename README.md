@@ -43,9 +43,10 @@ while allowing O(1) additions at the back and fills from the front.
 ## Build & Run
 
 ```sh
-cargo build --release   # build an optimized binary
-cargo run --release     # run the live demo
-cargo test              # run the unit tests
+cargo build --release                      # build an optimized binary
+cargo run --release                        # run the live demo
+cargo test                                 # run the unit tests
+cargo run --release --example throughput   # benchmark the matching engine
 ```
 
 The demo simulates stochastic behavior by streaming 500 random orders around an SPY-like
