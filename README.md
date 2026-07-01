@@ -43,10 +43,9 @@ while allowing O(1) additions at the back and fills from the front.
 ## Build & Run
 
 ```sh
-cargo build --release                      # build an optimized binary
-cargo run --release                        # run the live demo
-cargo test                                 # run the unit tests
-cargo run --release --example throughput   # benchmark the matching engine
+cargo build --release   # build an optimized binary
+cargo run --release     # run the live demo
+cargo test              # run the unit tests
 ```
 
 The demo simulates stochastic behavior by streaming 500 random orders around an SPY-like
@@ -54,6 +53,13 @@ price of 720.65, placing one every 10 ms and redrawing the book after each. Bids
 green on the left and asks in red on the right, with the best bid, best ask, and spread
 reported underneath. You can watch the levels build up and get eaten as marketable orders
 cross the spread.
+
+Benchmark the matching engine, without or with the live display:
+
+```sh
+cargo run --release --example throughput           # without the display
+cargo run --release --example throughput display   # with the display
+```
 
 ## License
 
